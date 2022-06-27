@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>测试报告</title>
+        <link rel="stylesheet" href="report_temp.css" />
+    </head>
+    <body>
+    <div id="result_info">
+        jenkins集成测试结果汇总
+        点击报告链接可进入对应的测试报告页面
+    </div>
+    <table
+        id="result_table"
+        cellpadding="0"
+        width="100%"
+        onClick="loadLargeImage(event)"
+        style="border-collapse:collapse"
+    >
+        <thead>
+            <tr>
+                <th>项目状态</th>
+                <th>项目名称</th>
+                <th>测试类型</th>
+                <th>测试结果</th>
+                <th>错误报告链接</th>
+                <th>完整报告链接</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+            __result_table_info__
+        </tbody>
+    </table>
+    </body>
+</html>

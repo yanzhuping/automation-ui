@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>测试报告</title>
+        <link rel="stylesheet" href="report_temp.css" />
+    </head>
+    <body>
+    <div id="result_info">
+        执行结果 total:__total_result__ , failed: __failed_result__
+    </div>
+    <table
+        id="result_table"
+        cellpadding="0"
+        width="100%"
+        onClick="loadLargeImage(event)"
+        style="border-collapse:collapse"
+    >
+        <thead>
+            <tr>
+                <th>用例编号</th>
+                <th>执行结果</th>
+                <th>用例ID</th>
+                <th>步骤描述</th>
+                <th>关键字</th>
+                <th>元素关键字</th>
+                <th>选择器</th>
+                <th>操作值</th>
+                <th width="500px">错误信息</th>
+                <th width="200px">截图</th>
+            </tr>
+        </thead>
+        <tbody>
+            __result_table_info__
+        </tbody>
+    </table>
+    <div class="large-img" onClick="closeLargeImage()"></div>
+        <script>
+            function loadLargeImage(e) {
+                if (e.target.tagName == 'IMG') {
+                    var largeImg = document.querySelector('.large-img');
+                    largeImg.style.backgroundImage =
+                        'url(' + e.target.getAttribute('src') + ')';
+                    largeImg.style.display = 'block';
+                }
+            }
+            function closeLargeImage() {
+                var largeImg = (document.querySelector(
+                    '.large-img'
+                ).style.display = 'none');
+            }
+        </script>
+    </body>
+</html>
